@@ -1,0 +1,8 @@
+description = "Spring Commons Logging Bridge"
+
+apply plugin: "java"
+apply plugin: "maven"
+dependencies {
+	optional("org.apache.logging.log4j:log4j-api:${log4jVersion}")
+	optional("org.slf4j:slf4j-api:${slf4jVersion}")
+}

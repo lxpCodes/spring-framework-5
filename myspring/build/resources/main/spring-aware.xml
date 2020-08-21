@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!--<bean id="hello" class="com.springframe.aware.Hello">
+	</bean>
+
+	<bean id="testAware" class="com.springframe.aware.TestAware">
+	</bean>-->
+
+	<bean id="userManager" class="com.springframe.aware.UserManager">
+		<property name="dataValue">
+			<value>2020-08-13</value>
+		</property>
+	</bean>
+	<!--	自定义属性编辑器解析字符串为日期-->
+	<!--<bean class="org.springframework.beans.factory.config.CustomEditorConfigurer">
+		<property name="customEditors">
+			<map>
+				<entry key="java.util.Date">
+					<bean class="com.springframe.aware.DatePropertyEditor">
+						<property name="format" value="yyyy-MM-dd"></property>
+					</bean>
+				</entry>
+			</map>
+		</property>
+	</bean>-->
+
+	<!--	注册spring自带的属性编辑器CustomDateEditor-->
+	<bean class="org.springframework.beans.factory.config.CustomEditorConfigurer">
+		<property name="propertyEditorRegistrars">
+			<list>
+				<bean class="com.springframe.aware.DatePropertyEditorRegistarar"></bean>
+			</list>
+		</property>
+	</bean>
+
+</beans>

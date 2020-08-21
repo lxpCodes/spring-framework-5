@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="getBeanTest" class="com.springframe.bean.GetBeanTest">
+		<lookup-method name="getBean" bean="student"></lookup-method>
+	</bean>
+	<bean id="teacher" class="com.springframe.bean.Teacher"></bean>
+	<bean id="student" class="com.springframe.bean.Student"></bean>
+
+	<bean id="testChangeMethod" class="com.springframe.bean.TestChangeMethod">
+		<replaced-method name="changeMe" replacer="replacer"></replaced-method>
+	</bean>
+	<bean id="replacer" class="com.springframe.bean.TestMethodReplacer"></bean>
+
+	<bean id="student1" class="com.springframe.bean.StudentFactory">
+		<constructor-arg value="旺福,18,168.66"></constructor-arg>
+	</bean>
+
+</beans>

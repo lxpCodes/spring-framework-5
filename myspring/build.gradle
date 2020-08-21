@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group 'org.springframework.study'
+version '1.0'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    compile(project(":spring-beans"))
+    compile(project(":spring-aop"))
+    compile(project(":spring-aspects"))
+    compile(project(":spring-core"))
+    compile(project(":spring-context"))
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}

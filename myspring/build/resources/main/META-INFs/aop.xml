@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<aspectj>
+
+	<!--<weaver>
+		<include within="com.springframe.aop"></include>
+	</weaver>
+
+	<aspects>
+		<aspect name="com.springframe.aop.AspectJTest"/>
+	</aspects>-->
+
+</aspectj>
